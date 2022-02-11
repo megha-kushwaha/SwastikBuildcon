@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Swastik Buildcon</title>
+          <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link rel = "icon" href = "img/bLogo.jpg" 
+        type = "image/x-icon">
+      
+      
+      
+      <style>
+             * {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin: 40px auto 40px;
+  color: #D49E8D;
+  text-transform: uppercase;
+}
+
+.main {
+  width: 85%;
+  min-height: 380px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.service {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: 0 0 20px -15px #030380;
+  transition: transform .8s;
+}
+
+/* Mengatur posisi logo service */
+.service-logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: -90px auto 0;
+  background: #fff;
+  border: 18px solid #D49E8D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Membuat border title */
+.service h4 {
+  height: 35px;
+  width: 80%;
+  margin: 50px auto;
+  background: #fff;
+  position: relative;
+}
+
+.service h4::after,
+.service h4::before {
+  content: '';
+  width: 40px;
+  height: 30px;
+ position: absolute;
+ z-index: -1;
+}
+
+.service h4::after {
+  background: linear-gradient(to right, #fff, #007bff);
+  right: -5px;
+  top: -5px;
+}
+
+.service h4::before {
+  background: linear-gradient(to right, #007bff, #fff);
+  left: -5px;
+  bottom: -5px;
+}
+
+
+/* membuat shadow untuk service */
+.main::after {
+  content: '';
+  height: 200px;
+  width: 80%;
+  background: #fff;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 10%;
+  z-index: -1;
+  box-shadow: 0 0 20px -15px #030380;
+  transition: transform .8s;
+}
+.main::before {
+  content: '';
+  height: 200px;
+  width: 64%;
+  background: #fff;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 18%;
+  z-index: -2;
+  box-shadow: 0 0 20px -15px #030380;
+}
+
+.main:hover .service {
+  transform: translateY(-50px);
+}
+
+.main:hover::after {
+  transform: translateY(-25px);
+}
+
+.service-logo i {
+    font-size: 50px;
+    color:#007bff;
+  transition: transform 1s;
+}
+
+
+.main:hover .service-logo i {
+  transform: rotate(360deg);
+  
+}
+/*portfolio*/
+.row .col div {
+    background-color: gray;
+    min-height: 20rem;
+  }
+ /*choose*/
+ @media only screen and (min-width: 1080px) {
+     
+     
+  
+.choose {
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url("https://i.ibb.co/jVL0zvC/section-img.jpg");
+    background-size: cover;
+    background-position: 43%;
+    opacity: .8;
+    position: relative;    
+}
+
+.center-div {
+   position: absolute;
+   top: 45%;
+   margin-top: -30px;
+   width: 80%;
+   left: 50%;
+   transform: translate(-50%,-50%); 
+}
+
+.center-div h2 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.center-div p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ccc;
+    line-height: 1.8;
+
+}
+
+.choices {
+    display: flex;
+}
+
+.left-top,
+.right-top,
+.right-bottom,
+.left-bottom {
+    position: absolute;
+    display: flex;
+    transition: .6s;
+    cursor: pointer;
+    width: 100%;
+    user-select: none;
+}
+
+.left-top:hover,
+.right-top:hover,
+.right-bottom:hover,
+.left-bottom:hover {
+    transform: scale(1.1);
+}
+
+.left-top {
+    left: -70%;
+    top:  3%;
+}
+
+.right-top {
+    left: 70%;
+    top: 3%;
+}
+
+.right-bottom {
+    left: 70%;
+    top: 80%;
+}
+
+.left-bottom {
+    left: -70%;
+    top: 80%;
+}
+
+.left-top-circle,
+.right-top-circle,
+.right-bottom-circle,
+.left-bottom-circle {
+    position: relative;   
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+}
+
+.left-top-circle{
+    left: 81%;    
+}
+
+
+.left-bottom-circle {
+    left: 81%;
+}
+
+.left-top-circle img,
+.right-top-circle img,
+.right-bottom-circle img,
+.left-bottom-circle img {
+    width: 70%;
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+}
+
+.left-top-text,
+.right-top-text,
+.right-bottom-text,
+.left-bottom-text {
+    position: relative;
+    padding: 8px;
+    width: 80%;
+   
+}
+
+.left-top-text {
+    left: -27%;
+}
+
+.right-top-text {
+    left: 7.5%;
+}
+
+.right-bottom-text {
+    left: 7.5%;
+    top: 80%;
+}
+
+.left-bottom-text {
+    left: -27%;
+}
+
+.left-top-text h3,
+.right-top-text h3,
+.right-bottom-text h3,
+.left-bottom-text h3 {
+    text-align: right;
+    color: #263c41;
+    opacity: .9;
+    font-size: 22px;
+}
+
+.right-top-text h3,
+.right-bottom-text h3{
+    text-align: left;
+}
+
+.left-top-text p,
+.right-top-text p,
+.right-bottom-text p,
+.left-bottom-text p {
+    margin-top: 30px;
+    color: #979dac;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+ }
+
+@media only screen and (max-width: 900px) {
+ .big-title {
+	position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%,70%);
+    font-size: 60px;
+    font-weight: 700;
+    opacity: 0.15;
+   
+}
+}
+@media only screen and (min-width: 900px) {
+ .big-title {
+	position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%,70%);
+    font-size: 150px;
+    font-weight: 700;
+    opacity: 0.15;
+  
+}
+ }
+ @media only screen and (max-width: 1080px) {
+.left-top:hover,
+.right-top:hover,
+.right-bottom:hover,
+.left-bottom:hover {
+    transform: scale(1.1);
+}
+
+.left-top-circle,
+.right-top-circle,
+.right-bottom-circle,
+.left-bottom-circle {
+    position: relative;   
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+}
+
+.left-top-text h3,
+.right-top-text h3,
+.right-bottom-text h3,
+.left-bottom-text h3 {
+    text-align: right;
+    color: #263c41;
+    opacity: .9;
+    font-size: 22px;
+}
+
+
+
+.left-top-text p,
+.right-top-text p,
+.right-bottom-text p,
+.left-bottom-text p {
+    margin-top: 30px;
+    color: #979dac;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+ }
+
+@media only screen and (max-width: 900px) {
+ .big-title {
+	position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%,70%);
+    font-size: 60px;
+    font-weight: 700;
+    opacity: 0.15;
+   
+}
+}
+@media only screen and (min-width: 900px) {
+ .big-title {
+	position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%,70%);
+    font-size: 150px;
+    font-weight: 700;
+    opacity: 0.15;
+  
+}
+}
+  .btn-grad {background-image: linear-gradient(to right, #FFA17F 0%, #00223E  51%, #FFA17F  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+.footer{ text-align: center; background-color:#D49E8D; color: white;}
+.social-group 
+{
+	align-items: center;
+	display: grid;
+	grid-auto-rows: minmax(30px, 1fr);
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
+	justify-content: center;
+
+	list-style: none;
+	margin: auto;
+	padding: 0;
+
+	
+	.social-item  {
+		font-size: 0.5rem;
+	}
+
+}
+
+      </style>
+    
+    </head>
+    <body>
+      
+        
+<nav class="navbar navbar-expand-sm bg-white navbar-light m-0 p-0">
+  <div class="container-fluid">
+      <a class="navbar-brand"><img class="img-fluid" src="img/logo.jpeg"  width="250" height="80"></a>
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+        
+    <center><h1 class="m-0 p-2">Building Your Future</h1>
+        <h6>We offer reliable architecture services to help you<br> build with excellence.</h6>
+    </center>
+    
+        
+    <section class='container img-fluid' style="background: url('https://wallpapercave.com/wp/wp2124316.jpg')70% 30%; background-size:cover;height: 30em;width:100em;">
+    </section>
+    
+    
+      <h1>What We Do?</h1>
+<div class="container">
+  <div class="row">
+     <div class="col-md-4">
+       <div class="main">
+        <div class="service">
+          <div class="service-logo">
+            <i class="ri-layout-masonry-line"></i>
+            
+          </div>
+          <h4 class="text-wrap m-5">House Planning</h4>
+            </div>
+      </div>
+    </div>
+             <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+            <i class="ri-compass-3-fill"></i>
+          </div>
+          <h4 class="text-wrap m-5">Vastu Designer</h4>
+            </div>
+      </div>
+    </div>
+              <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+              <i> <img src="https://img.icons8.com/external-flatarticons-blue-flatarticons/65/000000/external-couch-hotel-services-flatarticons-blue-flatarticons.png"/></i>
+          </div>
+            
+          <h4 class="text-wrap m-5">Interior Design</h4>
+            </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+            <img src="https://fadzrinmadu.github.io/hosted-assets/website-design-service-section/icon-apple.png">
+          </div>
+          <h4 class="text-wrap m-5 p-3">2D Design</h4>
+        
+        </div>
+      </div>
+    </div>
+
+
+   
+        <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+            <img src="https://fadzrinmadu.github.io/hosted-assets/website-design-service-section/icon-geography.png">
+          </div>
+          <h4 class="text-wrap m-5">Structure design</h4>
+            </div>
+      </div>
+    </div>
+        <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+           <i class="ri-community-fill"></i>
+          </div>
+          <h4 class="text-wrap m-5">Exterior Design</h4>
+            </div>
+      </div>
+    </div>
+              <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+            <img src="https://fadzrinmadu.github.io/hosted-assets/website-design-service-section/icon-geography.png">
+          </div>
+          <h4 class="text-wrap m-5">Space Visualisation</h4>
+            </div>
+      </div>
+    </div>
+              <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+            <img src="https://fadzrinmadu.github.io/hosted-assets/website-design-service-section/icon-geography.png">
+          </div>
+          <h4 class="text-wrap m-5">Space Partition</h4>
+            </div>
+      </div>
+    </div>
+
+              <div class="col-md-4">
+      <div class="main">
+        <div class="service">
+          <div class="service-logo">
+              <i><img src="img/icons8-house-60.png" alt=""/></i>
+          </div>
+          <h4 class="text-wrap m-5">Villa Design</h4>
+            </div>
+      </div>
+    </div>
+       
+
+  
+  </div>
+</div>
+      
+      <br><br><br>
+      
+      <h1>Why Choose us?</h1>
+        <section class="container">
+            <div class="choose img-fluid">
+            <div class="center-div">
+               <h2>Why you choice Us ?</h2>
+               <p>Shaping the world through Design, Craft and Building Technology.</p> 
+            </div>
+            
+             
+            <div class="choices">
+                <div class="left-top">
+                    <div class="left-top-circle">
+                        <img src="img/money-bag.png" class="img-fluid" alt="highquality"/>
+                    </div>
+
+                    <div class="left-top-text">
+                        <h3>BUDGET ORIENTED</h3>
+                        <p>At Swastik Buildcon we try to fulfill all the customer requirements and needs at a low budget and make use of given resource as carefully and efficient as possible. </p>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="right-top">
+                    <div class="right-top-circle">
+                        <img src="img/creative.png" class="img-fluid"alt="backup"/>
+                    </div>
+
+                    <div class="right-top-text">
+                        <h3>CREATIVE DESIGNING</h3>
+                        <p>we have highly talented and experienced interior designers which work very creatively to make your house more appealing and beautiful within a strict budget.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="right-bottom">
+                    <div class="right-bottom-circle">
+                        <img src="img/satisfaction.png"class="img-fluid" alt="smart"/>
+                    </div>
+
+                    <div class="right-bottom-text">
+                        <h3>CUSTOMER SATISFACTION</h3>
+                        <p>We are highly devoted towards customer’s satisfaction and we understand the anxiety and uncertainly most of the customers to build their dream project whether it is a dream house, restaurant or any other architecture design. </p>
+                    </div>
+                </div>
+
+
+
+                <div class="left-bottom">
+                    <div class="left-bottom-circle">
+                        <img src="img/cost.png" class="img-fluid" alt="customer"/>
+                    </div>
+
+                    <div class="left-bottom-text">
+                        <h3>COST EFFECTIVE</h3>
+                        <p>Since we love to satisfy our customer here we provide free modifications in the designs, hence you’ll also save big.  At Swastik Buildcon we understand that each every individual has its own taste, need, preference and budget.</p>
+                    </div>
+                </div>
+            </div></div>
+
+        </section>
+      
+      <br><br><br><br><br>
+      <section id="portfolio">
+          	
+          <h1>Portfolio</h1>
+<div class="container py-5">
+  <div class="d-flex justify-content-end mb-4">
+    <div>
+      <label for="range" class="form-label">Layout Photos size: <span id="size">M</span></label>
+      <input type="range" class="form-range" id="range" min="1" max="5" value="3">
+    </div>
+  </div>
+
+  <div class="row g-3 justify-content-center">
+    <div class="col col-4">
+      <div></div>
+    </div>
+    <div class="col col-4">
+      <div></div>
+    </div>
+    <div class="col col-4">
+      <div></div>
+    </div>
+    <div class="col col-4">
+      <div></div>
+    </div>
+    <div class="col col-4">
+      <div></div>
+    </div>
+  
+  </div>
+</div>
+      
+      
+        <script>
+            window.onload =  () => {
+    let range = document.getElementById("range")
+    range.addEventListener("input", function (event) {
+      let col_size = event.target.value;
+      document.querySelectorAll(".row .col").forEach(col => {
+        var size, size_as_text;
+        switch (Number(col_size)) {
+          case 1:
+            size = 2;
+            size_as_text = "XS";
+            break;
+          case 2:
+            size = 3;
+            size_as_text = "S";
+            break;
+          case 3:
+            size = 4;
+            size_as_text = "M";
+            break;
+          case 4:
+            size = 6;
+            size_as_text = "L";
+            break;
+          case 5:
+            size = 12;
+            size_as_text = "XL";
+        }
+        col.className = "col col-" + size;
+        document.getElementById("size").innerText = size_as_text;
+      });
+    });
+            };
+        </script>
+
+
+      
+      
+      </section>
+      <br><br><br><br><br><br>
+	
+	<!-- START CONTACT SECTION -->
+        
+	<div class="container" id="contact">
+		
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-10 col-xl-8">
+					<div class=" text-center">
+						<h2 class="title display-4 " style="color: #D49E8D;">Get In Touch
+					
+							<span class="big-title">CONTACT</span>
+						</h2>
+                                            <br>
+						<p class="description">You can free to contact us. We are happy to meet with you.</p>
+						
+					</div>
+				</div>
+			</div>
+                   <form class="form-group">
+  
+   
+                       <i class="fa fa-user" style="color: #D49E8D;"></i><input type="text" class="form-control" placeholder="ENTER YOUR NAME" name="name" required><br>
+                       <i class="fa fa-envelope" style="color: #D49E8D;"></i><input type="email" class="form-control" placeholder="ENTER YOUR EMAIL" name="email"><br>
+                       <i class="fa fa-phone" style="color: #D49E8D;"></i><input type="number" class="form-control" placeholder="ENTER YOUR PHONE NUMBER" name="ph"><br>
+                       <i class="fa fa-check" style="color: #D49E8D;"></i><input type="text" class="form-control" placeholder="ENTER YOUR SUBJECT" name="sub"><br>
+                       <i class="fa fa-commenting" style="color: #D49E8D;"></i><input type="text" class="form-control" placeholder="ENTER YOUR MESSAGE" name="msg"><br>
+    
+                       <center>  <button type="submit" class="btn btn-primary btn-grad">Submit</button></center>
+       
+         
+</form>
+     
+        </div>
+				
+	
+	<!-- / END CONTACT SECTION -->
+	
+
+      
+      
+      
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <!--footer-->
+	<div class="container-fluid  footer float-right">
+            <div class="row">
+            <div class="col-sm-6" style="top:-8rem;">
+		<img class="img-fluid" src="img/logo.jpeg" alt=""/>
+            </div>
+                
+            <div class="col-sm-6 pt-5">
+		<h3>Get in touch</h3><br>
+                
+                You can always contact with us via email or phone.
+               <p>Email ID: rajatt915@gmail.com </p>
+               <p>Mobile Number:+91-7354682620 </p>
+                
+            </div>
+                </div>
+            
+            	<div class="social">
+		<div class="social-group">
+			<div class="social-item">
+				<a href="#"><i class="fa fa-instagram fa-3x text-white"></i></a>
+			</div>
+			<div class="social-item">
+				<a href="#"><i class="fa fa-facebook fa-3x text-white"></i></a>
+			</div>
+			<div class="social-item">
+				<a href="#"><i class="fa fa-linkedin fa-3x  text-white"></i></a>
+			</div>
+			<div class="social-item">
+				<a href="#"><i class="fa fa-youtube fa-3x text-white"></i></a>
+			</div>
+		</div>
+	</div>
+            <br>
+            <div class="container">
+                <p id="updatr" class="notice">
+                    @Copyright &copy;<script>document.write(new Date().getFullYear());</script> . All rights reserved.
+                </p>
+                
+                
+            </div>
+           
+            </div>
+
+      
+      
+
+    </body>
+</html>
+
